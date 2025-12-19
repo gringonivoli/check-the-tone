@@ -1,6 +1,24 @@
 [package]
 name = "check-the-tone"
+authors = ["gringonivoli"]
 version = "0.1.0"
 edition = "2024"
+description = "A CLI tool to check and improve the tone of your messages using local LLMs"
+license = "MIT"
+repository = "https://github.com/gringonivoli/check-the-tone"
+readme = "README.md"
+keywords = ["cli", "llm", "tone", "communication"]
+categories = ["command-line-utilities"]
+
+[[bin]]
+name = "ctt"
+path = "src/main.rs"
 
 [dependencies]
+clap = { version = "4.5.53", features = ["derive"] }
+ollama-rs = "0.3.3"
+tokio = { version = "1.48.0", features = ["macros", "rt-multi-thread"]}
+
+[dev-dependencies]
+assert_cmd = "2.1.1"
+predicates = "3.1.3"
