@@ -1,7 +1,7 @@
 # CTT - Check The Tone
 
 [![Crates.io](https://img.shields.io/crates/v/check-the-tone.svg)](https://crates.io/crates/check-the-tone)
-![Crates.io Downloads (latest version)](https://img.shields.io/crates/dv/check-the-tone)
+![Crates.io Total Downloads](https://img.shields.io/crates/d/check-the-tone)
 [![Dependency Status](https://deps.rs/repo/github/gringonivoli/check-the-tone/status.svg)](https://deps.rs/repo/github/gringonivoli/check-the-tone)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 

@@ -1,9 +1,9 @@
 [package]
 name = "check-the-tone"
 authors = ["gringonivoli"]
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
-description = "A CLI tool to check and improve the tone of your messages using local LLMs"
+description = "ctt - A CLI tool to check and improve the tone of your messages using local LLMs."
 license = "MIT"
 repository = "https://github.com/gringonivoli/check-the-tone"
 readme = "README.md"
