@@ -8,18 +8,25 @@ impl Msg {
         Msg {
             value,
             prompt_tpl: "Check the tone of the following message.
-                1. Say whether the tone is polite, clear, friendly and collaborative.
-                2. Then provide a revised version of the message.
+                1. In ONE short sentence, say whether the tone is polite, clear, friendly, and collaborative.
+                2. Then rewrite the message to improve the tone ONLY.
 
-                Use this exact format:
+                Important rules for the rewrite:
+                - Preserve the original meaning exactly
+                - Do NOT add new information, suggestions, or context
+                - Do NOT remove any essential information
+                - Only adjust wording, grammar, and tone
+
+                Use this exact format and do not add anything else:
 
                 Tone:
-                <your evaluation>
-
+                <one short evaluation sentence>
+                
                 Revised message:
-                <rewritten message>
+                <full rewritten message>
 
-                Message: <_PASTE MESSAGE HERE_>"
+                Message:
+                <_PASTE MESSAGE HERE_>"
                 .to_string(),
         }
     }

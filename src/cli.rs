@@ -1,5 +1,5 @@
 use clap::Parser;
-use ollama_rs::{Ollama, generation::completion::request::GenerationRequest};
+use ollama_rs::{Ollama, error::OllamaError, generation::completion::request::GenerationRequest};
 
 use crate::msg::Msg;
 
@@ -36,16 +36,14 @@ impl Cli {
         self.url.clone()
     }
 
-    pub async fn run(&self) -> Result<(), String> {
-        match Ollama::new(self.url(), self.port())
-            .generate(GenerationRequest::new(self.model(), self.msg().prompt()))
-            .await
-        {
-            Ok(res) => {
-                println!("{}", res.response);
-                Ok(())
-            }
-            Err(err) => Err(err.to_string()),
-        }
+    pub async fn run(&self) -> Result<(), OllamaError> {
+        println!(
+            "{}",
+            Ollama::new(self.url(), self.port())
+                .generate(GenerationRequest::new(self.model(), self.msg().prompt()))
+                .await?
+                .response
+        );
+        Ok(())
     }
 }
